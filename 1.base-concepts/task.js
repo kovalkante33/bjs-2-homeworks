@@ -10,7 +10,7 @@ function solveEquation(a, b, c) {
   } else { // Если дискриминант больше нуля, существует два корня, вычесляем
     let sqrtOne = (-b + Math.sqrt(discriminant)) / (2 * a);
     let sqrtTwo = (-b - Math.sqrt(discriminant)) / (2 * a);
-    roots.push(sqrtOne, sqrtTwo);
+    arr.push(sqrtOne, sqrtTwo);
   }
 
   return arr;
