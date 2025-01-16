@@ -2,6 +2,7 @@
 function solveEquation(a, b, c) {
   let arr = [];
   let discriminant = b ** 2 - 4 * a * c; // Вычисляем дискриминант
+  
   if (discriminant < 0) { // Если дискриминант меньше нуля
     return arr;
   } else if (discriminant === 0) { // Если дискриминант равен нулю
