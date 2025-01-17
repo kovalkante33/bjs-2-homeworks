@@ -13,9 +13,9 @@ function getArrayParams(...arr) {
     sum += arr[i];
   }
 
-  let avg = +(sum / arr.length).toFixed(2);
+  let avg = (sum / arr.length).toFixed(2);
 
-  return { min: min, max: max, avg: avg };
+  return { min: min, max: max, avg: Number(avg) };
 }
 
 // Функция для нахождения суммы элементов массива
