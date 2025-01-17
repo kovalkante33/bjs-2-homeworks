@@ -1,3 +1,4 @@
+// Функция для нахождения минимального, максимального и среднего значений
 function getArrayParams(...arr) {
   let min = arr[0];
   let max = arr[0];
@@ -81,6 +82,16 @@ function averageEvenElementsWorker(...arr) {
   return sumEvenElement / countEvenElement;
 }
 
+// Функция для возврата максимального результата функции насадки
 function makeWork(arrOfArr, func) {
+  let maxWorkerResult = -Infinity;
 
+  for (let arr of arrOfArr) {
+    const result = func(...arr);
+    if (result > maxWorkerResult) {
+      maxWorkerResult = result;
+    }
+  }
+
+  return maxWorkerResult;
 }
