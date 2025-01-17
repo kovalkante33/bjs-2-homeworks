@@ -84,10 +84,14 @@ function averageEvenElementsWorker(...arr) {
 
 // Функция для возврата максимального результата функции насадки
 function makeWork(arrOfArr, func) {
-  let maxWorkerResult = -Infinity;
+  // let maxWorkerResult = -Infinity;
 
-  for (let arr of arrOfArr) {
-    const result = func(...arr);
+  // for (let arr of arrOfArr) {
+  //   const result = func(...arr);
+  let maxWorkerResult = func(...arrOfArr[0]);
+
+  for (let i = 1; i < arrOfArr.length; i++) {
+    const result = func(...arrOfArr[i]);
     if (result > maxWorkerResult) {
       maxWorkerResult = result;
     }
