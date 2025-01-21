@@ -9,7 +9,7 @@ Student.prototype.setSubject = function (subjectName) {
     this.subject = subjectName;
 }
 
-Student.prototype.addMarks = function (...marks) {
+Student.prototype.addMarks = function (...marksToAdd) {
     if (this.marks === undefined) {
         console.log()
     } else {
