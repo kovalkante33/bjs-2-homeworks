@@ -6,12 +6,12 @@ function Student(name, gender, age) {
     this.marks = [];
 }
 
-// Функция назначения студенту предмета обучения
+// Метод для назначения студенту предмета обучения
 Student.prototype.setSubject = function (subjectName) {
     this.subject = subjectName;
 }
 
-// Функция для установки отметок студенту
+// Метод для установки отметок студенту
 Student.prototype.addMarks = function (...marksToAdd) {
     if (this.marks === undefined) {
         console.log(`Студент ${this.name} отчислен, нет смысла добавлять оценки.`);
@@ -20,7 +20,7 @@ Student.prototype.addMarks = function (...marksToAdd) {
     }
 }
 
-// Функция для вычисления среднего арифметического по оценкам
+// Метод для вычисления среднего арифметического по оценкам
 Student.prototype.getAverage = function () {
     if (!this.marks || this.marks.length === 0) {
         return 0
@@ -29,7 +29,7 @@ Student.prototype.getAverage = function () {
     return sum / this.marks.length;
 }
 
-// Функция для исключения студента из учебного процесса
+// Метод для исключения студента из учебного процесса с указанием причины
 Student.prototype.exclude = function (reason) {
     delete this.subject;
     delete this.marks;
