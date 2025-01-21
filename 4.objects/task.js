@@ -1,3 +1,4 @@
+// Функция-конструктор для добавления данных о студентах
 function Student(name, gender, age) {
     this.name = name;
     this.gender = gender;
@@ -5,18 +6,21 @@ function Student(name, gender, age) {
     this.marks = [];
 }
 
+// Функция назначения студенту предмета обучения
 Student.prototype.setSubject = function (subjectName) {
     this.subject = subjectName;
 }
 
+// Функция для установки отметок студенту
 Student.prototype.addMarks = function (...marksToAdd) {
     if (this.marks === undefined) {
-        console.log()
+        console.log(`Студент ${this.name} отчислен, нет смысла добавлять оценки.`);
     } else {
         this.marks.push(...marksToAdd);
     }
 }
 
+// Функция для вычисления среднего арифметического по оценкам
 Student.prototype.getAverage = function () {
     if (!this.marks || this.marks.length === 0) {
         return 0
@@ -25,6 +29,7 @@ Student.prototype.getAverage = function () {
     return sum / this.marks.length;
 }
 
+// Функция для исключения студента из учебного процесса
 Student.prototype.exclude = function (reason) {
     delete this.subject;
     delete this.marks;
