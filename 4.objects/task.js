@@ -14,7 +14,7 @@ Student.prototype.setSubject = function (subjectName) {
 // Функция для установки отметок студенту
 Student.prototype.addMarks = function (...marksToAdd) {
     if (this.marks === undefined) {
-        console.log(`Студент ${this.name} отчислен, нет смысла добавлять оценки.`);
+        return undefined;
     } else {
         this.marks.push(...marksToAdd);
     }
