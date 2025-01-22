@@ -39,7 +39,7 @@ class Magazine extends PrintEditionItem {
 
 // Определяет печатное издание, как книга - добавляет автора издания
 class Book extends PrintEditionItem {
-    constructor(name, releaseDate, pagesCount, author) {
+    constructor(author, name, releaseDate, pagesCount) {
         super(name, releaseDate, pagesCount);
         this.author = author;
         this.type = "book";
@@ -48,7 +48,7 @@ class Book extends PrintEditionItem {
 
 // Определяет жанра книги, как новелла
 class NovelBook extends Book {
-    constructor(name, releaseDate, pagesCount, author) {
+    constructor(author, name, releaseDate, pagesCount) {
         super(name, releaseDate, pagesCount, author);
         this.type = "novel";
     }
@@ -56,7 +56,7 @@ class NovelBook extends Book {
 
 // Определяет жанра книги, как фантастика
 class FantasticBook extends Book {
-    constructor(name, releaseDate, pagesCount, author) {
+    constructor(author, name, releaseDate, pagesCount) {
         super(name, releaseDate, pagesCount, author);
         this.type = "fantastic";
     }
@@ -64,7 +64,7 @@ class FantasticBook extends Book {
 
 // Определяет жанра книги, как детектив
 class DetectiveBook extends Book {
-    constructor(name, releaseDate, pagesCount, author) {
+    constructor(author, name, releaseDate, pagesCount) {
         super(name, releaseDate, pagesCount, author);
         this.type = "detective";
     }
