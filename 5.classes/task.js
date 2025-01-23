@@ -39,8 +39,8 @@ class Magazine extends PrintEditionItem {
 
 // Определяет печатное издание, как книга - добавляет автора издания
 class Book extends PrintEditionItem {
-    constructor(author, name, releaseDate, pagesCount) {
-        super(author, name, releaseDate, pagesCount);
+    constructor(name, releaseDate, pagesCount) {
+        super(name, releaseDate, pagesCount);
         this.author = author;
         this.type = "book";
     }
