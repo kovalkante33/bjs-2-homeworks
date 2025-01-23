@@ -48,24 +48,24 @@ class Book extends PrintEditionItem {
 
 // Определяет жанра книги, как новелла
 class NovelBook extends Book {
-    constructor(author, name, releaseDate, pagesCount) {
-        super(name, releaseDate, pagesCount, author);
+    constructor(author) {
+        super(author);
         this.type = "novel";
     }
 }
 
 // Определяет жанра книги, как фантастика
 class FantasticBook extends Book {
-    constructor(author, name, releaseDate, pagesCount) {
-        super(name, releaseDate, pagesCount, author);
+    constructor(author) {
+        super(author);
         this.type = "fantastic";
     }
 }
 
 // Определяет жанра книги, как детектив
 class DetectiveBook extends Book {
-    constructor(author, name, releaseDate, pagesCount) {
-        super(name, releaseDate, pagesCount, author);
+    constructor(author) {
+        super(author);
         this.type = "detective";
     }
 }
