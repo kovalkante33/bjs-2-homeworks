@@ -101,7 +101,7 @@ class Library {
     }
 }
 
-// Задача 3. Журнал успеваемости *
+// Задача 3. Журнал успеваемости*
 
 class Student {
     constructor(name) {
