@@ -26,9 +26,9 @@ class Triangle {
         if (a + b <= c || a + c <= b || b + c <= a) {
             throw new Error("Треугольник с такими сторонами не существует");
         }
-        this.a = a;
-        this.b = b;
-        this.c = c;
+        this.a = +a;
+        this.b = +b;
+        this.c = +c;
     }
     // Вычисление периметра
     get perimeter() {
