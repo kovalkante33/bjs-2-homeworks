@@ -9,7 +9,7 @@ function parseCount(value) {
     return number;
 }
 
-// Функция перехвата ошибки и вывона пользователю
+// Функция перехвата и возврата ошибки
 function validateCount(value) {
     try {
         return parseCount(value);
